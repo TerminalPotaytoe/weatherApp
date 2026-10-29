@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hidden {
+            display: none;
+        }
+        .weatherInfo {
+            border: 2px solid black;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 1rem;
+        }
+        .loader {
+            font-family: cursive;
+            font-size: large;
+            margin: 1.5rem;
+        }
+        .weatherForm {
+            margin: 1rem;
+            padding: 1.5rem;
+            border: 2px solid black;
+            border-radius: 1rem;
+        }
+    </style>
+    <h1>Weather App</h1>
+    <form id="weatherForm" class="weatherForm">
+        <label for="country">Country:</label>
+        <input
+            type="text"
+            id="country"
+            name="country"
+            placeholder="e.g. Singapore"
+            autocomplete="country-name"
+            required
+        >
+        <br>
+        <label>Temperature Unit:</label>
+
+        <input type="radio" id="unitC" name="unit" value="C" checked>
+        <label for="unitC">C</label>
+
+        <input type="radio" id="unitF" name="unit" value="F">
+        <label for="unitF">F</label>
+
+        <button type="submit" id="submitbtn">Enter</button>
+    </form>
+    <h1 class="loader hidden">Loading... Fun fact: Bananas are mildly radioactive</h1>
+
+    <div id="weatherInfo" class="weatherInfo hidden">
+        <h2 id="location"></h2>
+        <p id="conditions"></p>
+        <p id="description"></p>
+        <h3 id="temp"></h3>
+        <p id="tempmax"></p>
+        <p id="tempmin"></p>
+        <p id="humidity"></p>
+        <p id="sunrise"></p>
+        <p id="sunset"></p>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
